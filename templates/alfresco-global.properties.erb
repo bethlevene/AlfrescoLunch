@@ -183,3 +183,27 @@ ftp.port=2021
 #-------------
 #authentication.chain=alfrescoNtlm1:alfrescoNtlm
 
+### LDAP AD Connector properties (added B)  ###
+authentication.chain=alfinst:alfrescoNtlm,ldap1:ldap-ad
+ntml.authentication.sso.enabled=false
+ldap.synchronization.synchroniseChangesOnly=false
+ldap.authentication.allowGuestLogin=false
+ldap.authentication.userNameFormat=%s@dca.wa.gov.au
+ldap.authentication.java.naming.provider.url=ldap://DOMAIN.COM:389
+ldap.authentication.defaultAdministratorUserNames=admin,administrator,bob
+ldap.synchronization.active=true
+ldap.synchronization.java.naming.security.principal=@DOMAIN.COM
+ldap.synchronization.java.naming.security.credentials=
+ldap.synchronization.groupSearchBase=cn=Security_Groups,ou=Alfresco,dc=dca,dc=wa,dc=gov,dc=au
+ldap.synchronization.userSearchBase=cn=User_Accounts,ou=Alfresco,dc=dca,dc=wa,dc=gov,dc=au
+
+
+### Attribute Mapping (added B) ###
+ldap.synchronizationuserLastNameAttributeName=cn
+ldap.synchronization.userEmailAttributeName=mail
+ladp.synchronization.userFirstNameAttributeName=givenName
+ldap.synchronization.groupIdAttributeName=cn
+#ldap.synchronization.groupType=
+#ldap.synchronization.personType=
+ldap.synchronizationgroupMemberAttributeName=member
+#ldap.synchronization.userOrganizationalIdAttributeName=company
