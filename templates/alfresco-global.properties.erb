@@ -188,14 +188,14 @@ authentication.chain=alfinst:alfrescoNtlm,ldap1:ldap-ad
 ntml.authentication.sso.enabled=false
 ldap.synchronization.synchroniseChangesOnly=false
 ldap.authentication.allowGuestLogin=false
-ldap.authentication.userNameFormat=%s@dca.wa.gov.au
+ldap.authentication.userNameFormat=%s@DOMAIN.COM
 ldap.authentication.java.naming.provider.url=ldap://DOMAIN.COM:389
 ldap.authentication.defaultAdministratorUserNames=admin,administrator,bob
 ldap.synchronization.active=true
 ldap.synchronization.java.naming.security.principal=@DOMAIN.COM
 ldap.synchronization.java.naming.security.credentials=
-ldap.synchronization.groupSearchBase=cn=Security_Groups,ou=Alfresco,dc=dca,dc=wa,dc=gov,dc=au
-ldap.synchronization.userSearchBase=cn=User_Accounts,ou=Alfresco,dc=dca,dc=wa,dc=gov,dc=au
+ldap.synchronization.groupSearchBase=cn=Security_Groups,ou=Alfresco,dc=domain,dc=com
+ldap.synchronization.userSearchBase=cn=User_Accounts,ou=Alfresco,dc=domain,dc=com
 
 
 ### Attribute Mapping (added B) ###
