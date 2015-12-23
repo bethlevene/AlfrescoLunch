@@ -1,4 +1,6 @@
-## Fork of Order of the Bee "Honeycomb" edition of Alfresco
+## WAMU Alfresco
+a
+### Fork of Order of the Bee "Honeycomb" edition of Alfresco
 
 #### <a name='features'></a>Features
 * Standalone build with repo, share, mysql and solr on one server. Remote mysql supported now, remote solr and pentaho next version
@@ -12,6 +14,8 @@
 * Built in postfix mail server set up to deliver alfresco mails to the internet
 * Supports using your own SSL certificates and if not supplied will generate a self signed certificate, NOT MAKE EVERYONE USE THE SAME SSL LIKE ALFRESCO DOES!! :facepalm:
 * Custom Order of the Bee theme
+* Built in Anti-virus software (clamav)
+* LDAP Authentication (sync coming soon)
 
 #### <a name='included-addons'></a>Included addons
 A small list for now but soon to be growing
