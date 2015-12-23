@@ -1,12 +1,12 @@
 # == Class: alfresco
 #
-# A class to install Alfresco CE
+# A class to install Alfresco Honeycomb for WAMU and related orgs
 #
 # === Parameters
 #
 # [*domain_name*]
 # Domain name at which the installation will be resolved, e.g.
-# 'test.orderofthebee.org'
+# 'alfresco.museum.wa.gov.au'
 #
 # [*alfresco_base_dir*]
 # Where alfresco base folder is, i.e. location of alf_data. Defaults
@@ -69,7 +69,7 @@
 #
 # === Copyright
 #
-# Copyright 2011 Your name here, unless otherwise noted.
+# Copyright 2015 WAMU, unless otherwise noted.
 #
 
 class alfresco (
