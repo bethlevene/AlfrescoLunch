@@ -47,6 +47,8 @@ class alfresco::packages inherits alfresco {
 			"curl",
 			"ghostscript", 
 			"haveged",
+			"clamav",
+			"ldap-utils"
 		] 
 
 		$rmpackages = [ 
