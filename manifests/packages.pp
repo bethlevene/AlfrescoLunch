@@ -88,6 +88,8 @@ class alfresco::packages inherits alfresco {
 				"libjpeg62", 
 				"libpng3",
 				"haveged",
+				"clamav",
+				"ldap-utils",
         "sudo",
 			] 
 			$rmpackages = [ 
