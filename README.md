@@ -1,6 +1,5 @@
 ## Alfresco Lunch
-- a -
-### Fork of Order of the Bee "Honeycomb" edition of Alfresco
+a Fork of Order of the Bee "Honeycomb" edition of Alfresco
 
 #### <a name='features'></a>Features
 * Standalone build with repo, share, mysql and solr on one server. Remote mysql supported now, remote solr and pentaho next version
