@@ -48,6 +48,7 @@ class alfresco::packages inherits alfresco {
 			"ghostscript", 
 			"haveged",
 			"clamav",
+			"clamav-daemon",
 			"ldap-utils"
 		] 
 
@@ -89,6 +90,7 @@ class alfresco::packages inherits alfresco {
 				"libpng3",
 				"haveged",
 				"clamav",
+				"clamav-daemon",
 				"ldap-utils",
         "sudo",
 			] 
