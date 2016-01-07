@@ -183,27 +183,62 @@ ftp.port=2021
 #-------------
 #authentication.chain=alfrescoNtlm1:alfrescoNtlm
 
-### LDAP AD Connector properties (added B)  ###
+### LDAP AD Authicentation properties  ###
 authentication.chain=alfinst:alfrescoNtlm,ldap1:ldap-ad
 ntml.authentication.sso.enabled=false
-ldap.synchronization.synchroniseChangesOnly=false
+alfresco.authentication.authenticateCIFS=false
+alfresco.authentication.allowGuestLogin=false
+
+#passthru.authentication.authenticateCIFS=false
+#passthru.authentication.useLocalServer=false
+#passthru.authentication.domain=
+#passthru.authentication.guestAccess=false
+#passthru.authentication.defaultAdministratorUserNames=admin,administrator,alfresco
+#passthru.authentication.connectionTimeout=5000
+
+ldap.authentication.active=true
 ldap.authentication.allowGuestLogin=false
-ldap.authentication.userNameFormat=%s@DOMAIN.COM
-ldap.authentication.java.naming.provider.url=ldap://DOMAIN.COM:389
-ldap.authentication.defaultAdministratorUserNames=admin,administrator,bob
+ldap.authentication.userNameFormat=%s@dca.wa.gov.au
+ldap.authentication.java.naming.factory.initial=com.sun.jndi.ldap.LdapCtxFactory
+ldap.authentication.java.naming.provider.url=ldap://127.0.0.1:389
+ldap.authentication.defaultAdministratorUserNames=admin,administrator,alfresco
+ldap.authentication.escapeCommasInBind=false
+ldap.authentication.escapeCommasInUid=false
+
+### LDAP Synchronization properties ###
 ldap.synchronization.active=true
-ldap.synchronization.java.naming.security.principal=@DOMAIN.COM
-ldap.synchronization.java.naming.security.credentials=
-ldap.synchronization.groupSearchBase=cn=Security_Groups,ou=Alfresco,dc=domain,dc=com
-ldap.synchronization.userSearchBase=cn=User_Accounts,ou=Alfresco,dc=domain,dc=com
+ldap.synchronization.synchroniseChangesOnly=false
+ldap.synchronization.java.naming.security.principal=CN=ServiceAcount,dc=domain,dc=com
+ldap.synchronization.java.naming.security.authentication=simple
+ldap.synchronization.java.naming.security.credentials=secret
+ldap.synchronization.syncWhenMissingPeopleLogIn=true
+ldap.synchronization.syncOnStartup=true
+ldap.synchronization.queryBatchSize=0
+ldap.synchronization.attributeBatchSize=0
+ldap.synchronization.groupQuery=(objectclass\=group)
+ldap.synchronization.autoCreatePeopleOnLogin=true
+ldap.synchronization.import.cron=0 1 * * *
+ldap.synchronization.timestampFormat=yyyyMMddHHmmss'.0Z'
 
-
-### Attribute Mapping (added B) ###
-ldap.synchronizationuserLastNameAttributeName=cn
+### LDAP  Attribute Mapping Users ###
+ldap.synchronizationuserLastNameAttributeName=sn
 ldap.synchronization.userEmailAttributeName=mail
 ladp.synchronization.userFirstNameAttributeName=givenName
+ldap.synchronisation.userIdAttributeName=uid
+ldap.synchronization.defaultHomeFolderProvider=largeHomeFolderProvider
+ldap.synchronization.userManager=Manager
+ldap.synchronization.personType=user
+ldap.synchronization.personQuery=(objectclass\=user)
+ldap.synchronization.personDifferentialQuery=user
+ldap.synchronization.userSearchBase=dc=example,dc=com
+ldap.synchronization.userOrganizationalIdAttributeName=company
+
+
+### LDAP  Attribute Mapping Groups ###
 ldap.synchronization.groupIdAttributeName=cn
-#ldap.synchronization.groupType=
-#ldap.synchronization.personType=
-ldap.synchronizationgroupMemberAttributeName=member
-#ldap.synchronization.userOrganizationalIdAttributeName=company
+ladp.synchronization.groupDisplayNameAttributeName=description
+ldap.synchronization.groupType=group
+ldap.synchronization.groupQuery=(objectclass\=group)
+ladp.synchronization.groupSearchBase=dc=example,dc=com
+ldap.synchronization.groupMemberAttributeName=member
+Status API Training Shop Blog About Pricing
