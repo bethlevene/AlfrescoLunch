@@ -11,7 +11,7 @@ a Fork of Order of the Bee "Honeycomb" edition of Alfresco
 * Reverse proxy and firewall preconfigured, offloading SSL to apache and forwarding real ports (for ftp, for example) to unprivileged ones managed by repo
 * Can specify tomcat home and alfresco base, useful for putting `alf_data/` on shared storage
 * Built in postfix mail server set up to deliver alfresco mails to the internet
-* Supports using your own SSL certificates and if not supplied will generate a self signed certificate, NOT MAKE EVERYONE USE THE SAME SSL LIKE ALFRESCO DOES!! :facepalm:
+* Supports using your own SSL certificates and if not supplied will generate a self signed certificate
 * Custom Order of the Bee theme
 * Built in Anti-virus software (clamav)
 * LDAP Authentication &amp; Synchronization
@@ -116,6 +116,12 @@ Note you should not change `alfresco_base_dir` in this menu since it is picked u
 
 All the backup methods offered by BART are supported, for `backuptype` you can use any of 'scp', 's3', 'local', or 'ftp' and the menu will change to show relevant configuration.
 
+#### <a name="ldap"></a>LDAP Configuration
+At CLI type:
+<code>
+sudo nano /opt/alfresco/tomcat/shared/classes/alfresco-global.properties
+</code>
+Then edit the LDAP Authentication and Synchronization properties accordingly.
 
 #### <a name='ssl'></a>SSL Configuration
 
