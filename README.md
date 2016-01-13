@@ -30,7 +30,7 @@ A small list for now but soon to be growing
 First make sure that `git` is installed on your machine. Now run the following commands:
 
 ```
-  git clone https://github.com/marsbard/puppet-alfresco.git alfresco
+  git clone https://github.com/byronlevene/AlfrescoLunch.git alfresco
   cd alfresco
   ./install.sh
 ```
