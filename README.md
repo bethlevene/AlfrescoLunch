@@ -15,6 +15,7 @@ a Fork of Order of the Bee "Honeycomb" edition of Alfresco
 * Custom Order of the Bee theme
 * Built in Anti-virus software (clamav)
 * LDAP Authentication &amp; Synchronization
+* Clustering COMING SOON (Hazelcast)
 
 #### <a name='included-addons'></a>Included addons
 A small list for now but soon to be growing
